@@ -89,7 +89,8 @@ section {
   box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
   cursor: pointer;
 }
-.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo img { width: 100%; height: 100%; object-fit: cover;
+object-position: center 15%; }
 @media (prefers-reduced-motion: no-preference) {
   .photo:hover { animation: pulse 0.9s ease-out 1; }
   @keyframes pulse {
@@ -206,8 +207,8 @@ section {
 .modal-content {
   margin: 20px auto;
   display: block;
-  max-width: 95%;
-  max-height: 95vh;
+  max-width: 70%;
+  max-height: 70vh;
   border-radius: 10px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
   transform: scale(.96);
