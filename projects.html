@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brandon Elphick — Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand">Brandon Elphick</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="page">
+        <!-- Note: fade-in moved from the card to the H2 -->
+ <div class="card has-menu">
+  <div class="page-menu">
+    <button class="menu-trigger" type="button">Pages</button>
+    <nav class="menu-panel">
+      <a href="index.html">Home Page</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+    </nav>
+  </div>
+
+  <h2 class="fade-in">Projects</h2>
+
+  <div class="project-content fade-in">
+  <a class="fv-zoom" href="images/Images/footy-visions-diagram.png" data-full="images/Images/footy-visions-diagram.png" aria-label="Open Footy Visions diagram full size">
+    <img src="images/Images/footy-visions-diagram.png" alt="Footy Visions diagram" class="project-image">
+  </a>
+
+  <p class="project-text">
+    <strong>Footy Visions</strong> is a personal app project built in Flutter using Dart and Google ML Kit.
+    The app detects and tracks a red AFL football in real time, fits a parabolic trajectory, and displays a
+    tracer line with a predicted kick distance — similar to goal-tracking visuals in sports broadcasts.
+  </p>
+</div>
+
+<div class="project-content fade-in">
+  <div class="project-text">
+    <p>
+      The <strong>AI Assistant</strong> is a voice-driven smart hub that seamlessly connects and controls everyday devices such as TVs, laptops, and gaming consoles. Designed with a natural-sounding voice and intelligent speech recognition, it performs real-time actions based on user commands — from launching apps to playing media or adjusting settings. Built with a modular backend architecture and intuitive voice interface, the project showcases advanced integration between AI, automation, and connected devices — demonstrating strong skills in software engineering, system design, and user experience innovation.
+    </p>
+  </div>
+
+  <!-- keep your existing image exactly as is -->
+  <div class="project-image-bottom fade-in">
+    <a class="fv-zoom" 
+       href="images/Images/ai-assistant-diagram.png" 
+       data-full="images/Images/ai-assistant-diagram.png" 
+       aria-label="Open AI Assistant diagram full size">
+      <img src="images/Images/ai-assistant-diagram.png" 
+           alt="AI Assistant System Diagram" 
+           class="project-image secondary-image">
+    </a>
+  </div>
+</div>
+
+
+
+    </section>
+
+    <div class="built-with">
+  <h3>Built With</h3>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3 (responsive design)</li>
+    <li>JavaScript (animations and interactions)</li>
+    <li>Visual Studio Code</li>
+  </ul>
+</div>
+
+    <footer class="container">
+  © <span id="year"></span> Brandon Elphick — <span class="footer-note">Coded by hand in Visual Studio Code</span>
+</footer>
+
+  </main>
+
+  <script src="javascript.js"></script>
+
+  <script>
+  (function () {
+    // create lightbox once
+    const lb = document.createElement('div');
+    lb.className = 'fv-lightbox';
+    lb.innerHTML = `
+      <span class="fv-close" aria-label="Close (Esc)">Close ✕</span>
+      <img alt="Full size project image">
+    `;
+    document.body.appendChild(lb);
+    const img = lb.querySelector('img');
+
+    // open on click
+    document.addEventListener('click', function (e) {
+      const a = e.target.closest('a.fv-zoom');
+      if (!a) return;
+      e.preventDefault();
+      const full = a.getAttribute('data-full') || a.getAttribute('href');
+      img.src = full;
+      lb.classList.add('open');
+    });
+
+    // close on overlay/click/esc
+    function closeLB() { lb.classList.remove('open'); img.src = ''; }
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb || e.target.classList.contains('fv-close')) closeLB();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lb.classList.contains('open')) closeLB();
+    });
+  })();
+</script>
+
+</body>
+</html>

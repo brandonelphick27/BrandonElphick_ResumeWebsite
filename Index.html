@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brandon Elphick — Interactive Résumé</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand">Brandon Elphick</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home">
+      <div class="card hero">
+        <div class="photo" id="photo">
+          <img src="your-photo.jpg" alt="Photo of Brandon Elphick" />
+        </div>
+        <h1>Brandon Elphick</h1>
+        <p class="subtitle">IT & Cyber Security Student — Aspiring Software Developer</p>
+
+        <nav class="banners" aria-label="Section links">
+          <a class="banner-link" href="about.html"><span class="banner-label">About</span><span class="banner-arrow"></span></a>
+          <a class="banner-link" href="skills.html"><span class="banner-label">Skills</span><span class="banner-arrow"></span></a>
+          <a class="banner-link" href="projects.html"><span class="banner-label">Projects</span><span class="banner-arrow"></span></a>
+          <a class="banner-link" href="experience.html"><span class="banner-label">Experience</span><span class="banner-arrow"></span></a>
+          <a class="banner-link" href="education.html"><span class="banner-label">Education</span><span class="banner-arrow"></span></a>
+
+          <!-- Contact hover drop-down -->
+          <div class="banner-link contact-link">
+            <span class="banner-label">Contact</span><span class="banner-arrow"></span>
+            <div class="contact-hover-card">
+              <p><strong>Name:</strong> <span>Brandon Elphick</span></p>
+              <p><strong>Phone:</strong> <a href="tel:0401-406-870">0401-406-870</a></p>
+              <p><strong>Email:</strong> <a href="mailto:brandon.elphick@hotmail.com">brandon.elphick@hotmail.com</a></p>
+            </div>
+          </div>
+        </nav>
+
+      <div class="cover-letter">
+  <h2>Cover Letter</h2>
+  <div class="cover-letter-text">
+    <p>
+      Dear Hiring Manager,
+    </p>
+    <p>
+I am writing to express my interest in entry-level opportunities within the Information Technology field, including IT Support, Cyber Security, and Junior Software Development roles. I am currently completing a Certificate IV in Information Technology (Cyber Security) and will soon commence a Bachelor of Information Technology, which reflects my long-term commitment to building a professional career within the industry.
+    </p>
+    <p>
+      Throughout my studies, I have learned to identify emerging technologies, contribute to cyber-security risk management, interpret threat data, and provide first-level help desk support. These skills are supported by practical experience gained through personal projects, including mobile app development, backend system design, and AI-driven tools. I am motivated, detail-oriented, and eager to continue growing within a professional IT team while furthering my education.
+    </p>
+    <p>
+      I’ve also developed a real passion for coding and app development, using tools like Visual Studio Code and Flutter to experiment and create projects
+      that blend creativity with technical skill. These experiences have inspired me to continue learning and work toward my long-term goal of becoming a software developer.
+    </p>
+    <p>
+      Before studying IT, I worked in retail, where I learned the importance of teamwork, communication, and reliability.
+      I enjoy collaborating with others, solving problems, and finding ways to make technology work better for people.
+    </p>
+    <p>
+      I’m motivated, curious, and ready for the opportunity to apply what I’ve learned in a practical environment, and to keep growing with every challenge that comes my way.
+    </p>
+    <p>
+      Kind Regards,
+    </p>
+    <p>
+      Brandon Elphick
+    </p>
+  </div>
+</div>
+
+
+
+
+    </section>
+<div class="built-with">
+  <h3>Built With</h3>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3 (responsive design)</li>
+    <li>JavaScript (animations and interactions)</li>
+    <li>Visual Studio Code</li>
+  </ul>
+</div>
+
+
+    <!-- Modal for lightbox -->
+    <div id="photoModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" alt="Zoomed photo" />
+    </div>
+
+    <footer class="container">
+  © <span id="year"></span> Brandon Elphick — <span class="footer-note">Coded by hand in Visual Studio Code</span>
+</footer>
+
+  </main>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
